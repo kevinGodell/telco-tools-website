@@ -1,0 +1,49 @@
+/*test*/
+span#portrait, span#landscape, span#short, span#medium, span#tall {
+    display: block;
+}
+/*test*/
+@media screen and (orientation: portrait) {
+    span#landscape {
+        background-color: red;
+    }
+    span#portrait {
+        background-color: green;
+    }
+}
+/*test*/
+@media screen and (orientation: landscape) {
+    span#portrait {
+        background-color: red;
+    }
+    span#landscape {
+        background-color: green;
+    }
+}
+/*test*/
+@media screen and (max-height: 459px) {
+    span#short {
+        background-color: green;
+    }
+    span#medium, span#tall {
+        background-color: red;
+    }
+}
+/*test*/
+@media screen and (min-height: 460px) and (max-height: 1000px) {/*460 is height of iphone5c*/
+    span#medium {
+        background-color: green;
+    }
+    span#short, span#tall {
+        background-color: red;
+    }
+}
+/*test*/
+@media screen and (min-height: 1001px) {
+    span#tall {
+        background-color: green;
+    }
+    span#medium, span#short {
+        background-color: red;
+    }
+}

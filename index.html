@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+    <link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <title>Telco Tools</title>
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Telco Tools">
+    <link rel="apple-touch-icon" sizes="29x29" href="images/ios29x29.png">
+    <link rel="apple-touch-icon" sizes="40x40" href="images/ios40x40.png">
+    <link rel="apple-touch-icon" sizes="50x50" href="images/ios50x50.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/ios57x57.png">
+    <link rel="apple-touch-icon" sizes="58x58" href="images/ios58x58.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/ios72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/ios76x76.png">
+    <link rel="apple-touch-icon" sizes="80x80" href="images/ios80x80.png">
+    <link rel="apple-touch-icon" sizes="87x87" href="images/ios87x87.png">
+    <link rel="apple-touch-icon" sizes="100x100" href="images/ios100x100.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/ios114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/ios120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/ios144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/ios152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/ios180x180.png">
+
+    <!-- Tile icon for Win8 (+ tile color) -->
+    <meta name="application-name" content="">
+    <meta name="msapplication-config" content="ieconfig.xml"/>
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="black">
+
+</head>
+<body onpageshow="onPageShow()">
+<div id="top">
+    <a id="title" href="javascript:top.frames.location.reload();">Telco Tools</a>
+</div>
+<div id="container">
+    <div class="item">
+        <button class="nav" onclick="openLink({id: 'pic_color_finder', href: 'pic-color-finder.html'})">Pic Color Finder</button>
+        <button class="nav" onclick="openLink({id: 'vrad_calculator', href: 'vrad-calculator.html'})">Vrad Calculator</button>
+        <button class="nav" onclick="openLink({id: 'litespan_calculator', href: 'litespan-calculator.html'})">Litespan Calculator</button>
+        <button class="nav" onclick="openLink({id: 'gps_measuring', href: 'gps-measuring.html'})">GPS Measuring</button>
+    </div>
+</div>
+</body>
+</html>
+
+<!--
+iphone looking for icons
+192.168.1.142 - - [26/Oct/2016:20:54:35 -0500] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.1" 404 - "-" "Web/1.0 CFNetwork/758.3.15 Darwin/15.4.0"
+192.168.1.142 - - [26/Oct/2016:20:54:35 -0500] "GET /apple-touch-icon-120x120.png HTTP/1.1" 404 - "-" "Web/1.0 CFNetwork/758.3.15 Darwin/15.4.0"
+192.168.1.142 - - [26/Oct/2016:20:54:35 -0500] "GET /apple-touch-icon.png HTTP/1.1" 404 - "-" "Web/1.0 CFNetwork/758.3.15 Darwin/15.4.0"
+192.168.1.142 - - [26/Oct/2016:20:54:35 -0500] "GET /apple-touch-icon.png HTTP/1.1" 404 - "-" "Web/1.0 CFNetwork/758.3.15 Darwin/15.4.0"
+-->

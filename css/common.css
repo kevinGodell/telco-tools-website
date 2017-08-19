@@ -1,0 +1,456 @@
+html {
+    background-color: powderblue;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
+body {
+    /*overflow-y: scroll;
+    -webkit-overflow-scrolling: auto;*/
+}
+
+button#home {
+    margin: 0;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-right-color: white;
+    border-right-style: solid;
+    border-top: none;
+    border-left: none;
+}
+
+button#home:active {
+    color: red;
+    background-color: white;
+    border-right-color: red;
+    border-bottom-color: red;
+}
+
+div#top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+a#title {
+    text-decoration: none;
+    color: white;
+}
+
+div#container {
+    display: flex;
+
+    align-items: center;
+    -webkit-align-items: center;
+
+    justify-content: center;
+    -webkit-justify-content: center;
+
+    height: 90vh;
+}
+
+div.item {
+    background-color: lightblue;
+    width: 90%;
+
+    display: flex;
+
+    /*column or row*/
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    /*horizontal*/
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
+    /*vertical*/
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+button.nav {
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: red;
+    border-color: white;
+    border-style: solid;
+}
+
+button.nav:active {
+    color: red;
+    background-color: white;
+    border-color: red;
+}
+
+label {
+    color: darkblue;
+    white-space: nowrap;
+}
+
+select {
+    background-color: whitesmoke;
+}
+
+input {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+input.error {
+    text-decoration: line-through;
+    color: red;
+}
+
+p#error {
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+p#error.visible {
+    display: inline;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+div#command {
+    display: flex;
+}
+
+button.command {
+    margin: 2px;
+}
+
+div#locationStatus {
+    /*vertical*/
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+div#savedLocations {
+    display: inline-block;
+    overflow-y: auto;
+    /*-webkit-overflow-scrolling: auto;*/
+}
+
+span.gpsLocation {
+    display: block;
+    background-color: darkgray;
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+span.gpsDistance {
+    display: block;
+    background-color: lightgray;
+    padding-left: 5px;
+    border-radius: 3px;
+}
+
+span.gpsLabel {
+    color: blue;
+    font-weight: bold;
+}
+
+span.statusRed {
+    color: red;
+}
+
+p.gpsWarning {
+    color: red;
+    font-weight: bold;
+    font-size: 155%;
+    margin: 10px;
+}
+
+/*------------------------portrait------------------------*/
+@media screen and (orientation: portrait) {
+
+    div#container {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    div#command {
+        flex-direction: row;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+}
+/*------------------------landscape------------------------*/
+@media screen and (orientation: landscape) {
+
+    div#container {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+    }
+
+    div#command {
+        align-items: center;
+        -webkit-align-items: center;
+
+        justify-content: center;
+        -webkit-justify-content: center;
+
+        flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+}
+
+/*------------------------short------------------------*/
+@media screen and (max-height: 374px) {/*need to tweak*//*375 height of iphone6 in landscape*/
+
+    button#home {
+        font-size: medium;
+        padding: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-width: 1px;
+        border-right-width: 1px;
+    }
+
+    div#top {
+        font-size: medium;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    div#container {
+        margin-top: 24px;
+    }
+
+    div.item {
+        margin: 1px;
+        border-radius: 6px;
+        padding: 2px;
+        max-width: 190px;
+    }
+
+    button.nav {
+        font-size: large;
+        border-radius: 6px;
+        padding: 6px;
+        margin: 2px 2px 2px 2px;
+        border-width: 1px;
+    }
+
+    label, select, input, span#equals {
+        font-size: large;
+        margin: 1px;
+    }
+
+    input {
+        max-width: 96%;
+    }
+
+    div#locationStatus, div#savedLocations {
+        min-height: 148px;
+        max-height: 148px;
+        font-size: small;
+    }
+
+    div#command {
+        max-width: 190px;
+    }
+
+    button.command {
+        width: 91px;
+        -webkit-border-radius:1px;
+        -moz-border-radius:1px;
+        border-radius:1px;
+        height: 35px;
+        font-size: medium;
+    }
+
+}
+/*------------------------medium------------------------*/
+@media screen and (min-height: 375px) and (max-height: 999px) {
+
+    button#home {
+        font-size: large;
+        padding: 7px;
+        border-bottom-right-radius: 7px;
+        border-bottom-width: 2px;
+        border-right-width: 2px;
+    }
+
+    div#top {
+        font-size: large;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    div#container {
+        margin-top: 28px;
+    }
+
+    div.item {
+        margin: 2px;
+        border-radius: 8px;
+        padding: 2px;
+        max-width: 240px;
+    }
+
+    button.nav {
+        font-size: x-large;
+        border-radius: 8px;
+        padding: 8px;
+        margin: 4px 2px 4px 2px;
+        border-width: 2px;
+    }
+
+    label, select, input, span#equals {
+        font-size: x-large;
+        margin: 2px;
+    }
+
+    input {
+        max-width: 96%;
+    }
+
+    div#locationStatus, div#savedLocations {
+        height: 178px;
+        min-height: 178px;
+        max-height: 178px;
+        font-size: medium;
+    }
+
+    div#command {
+        max-width: 240px;
+    }
+
+    button.command {
+        margin: 2px;
+        width: 116px;
+        -webkit-border-radius:1px;
+        -moz-border-radius:1px;
+        border-radius:1px;
+        height: 40px;
+        font-size: large;
+    }
+
+}
+/*------------------------tall------------------------*/
+@media screen and (min-height: 1000px) {
+
+    button#home {
+        font-size: x-large;
+        padding: 9px;
+        border-bottom-right-radius: 9px;
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+    }
+
+    div#top {
+        font-size: x-large;
+        height: 32px;
+        line-height: 32px;
+    }
+
+    div#container {
+        margin-top: 32px;
+    }
+
+    div.item {
+        margin: 6px;
+        border-radius: 15px;
+        padding: 5px;
+        max-width: 340px;
+    }
+
+    button.nav {
+        font-size: xx-large;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 6px 2px 6px 2px;
+        border-width: 3px;
+    }
+
+    label, select, input, span#equals {
+        font-size: xx-large;
+        margin: 5px;
+    }
+
+    input {
+        max-width: 96%;
+    }
+
+    div#locationStatus, div#savedLocations {
+        min-height: 188px;
+        max-height: 188px;
+        font-size: large;
+    }
+
+    div#command {
+        max-width: 340px;
+    }
+
+    button.command {
+        width: 166px;
+        -webkit-border-radius:1px;
+        -moz-border-radius:1px;
+        border-radius:1px;
+        height: 45px;
+        font-size: x-large;
+    }
+
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-top: 1px dotted darkblue;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    /*margin: 0;*/
+    /*padding: 25px;*/
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------------------*/
+
+/*:focus {
+    outline:none;
+}
+::-moz-focus-inner {
+    border:0;
+}*/

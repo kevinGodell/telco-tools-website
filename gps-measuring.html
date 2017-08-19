@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script src="js/common.js"></script>
+    <script src="js/gps-measuring.js"></script>
+    <script src="js/ArrayList.js"></script>
+    <script src="js/GPSUtil.js"></script>
+    <script src="js/GPSFormatter.js"></script>
+    <title>GPS Measuring</title>
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="black">
+</head>
+<body onpageshow="onPageShow()">
+<button id="home" onclick="openLink({id: 'home', href: 'index.html'})">Home</button>
+<div id="top">
+    <a id="title" href="javascript:top.frames.location.reload();">GPS Measuring</a>
+    <span id="speed"></span>
+</div>
+<div id="container">
+    <div id="locationStatus" class="item">
+    </div>
+    <div id="savedLocations" class="item">
+    </div>
+    <div id="command">
+            <button id="add" class="command" onclick="addClick()" disabled>Add</button>
+            <!--<button id="replace" class="command" onclick="replaceClick()" disabled>Replace</button>-->
+            <button id="remove" class="command" onclick="removeClick()" disabled>Remove</button>
+            <button id="reset" class="command" onclick="resetClick()" disabled>Reset</button>
+            <button id="startStop" class="command" onclick="startStopClick()" disabled>Start</button>
+    </div>
+</div>
+</body>
+</html>

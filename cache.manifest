@@ -1,0 +1,84 @@
+CACHE MANIFEST
+
+# Cache manifest version 2016.10.28.10
+# If you change the version number in this comment,
+# the cache manifest will no longer be byte-for-byte
+# identical and will cause the cache to update,
+# which is required after updating the other files.
+
+CACHE:
+
+# html
+
+/telco-tools/index.html
+/telco-tools/pic-color-finder.html
+/telco-tools/litespan-calculator.html
+/telco-tools/vrad-calculator.html
+/telco-tools/gps-measuring.html
+
+# js
+
+/telco-tools/js/common.js
+/telco-tools/js/index.js
+/telco-tools/js/pic-color-finder.js
+/telco-tools/js/litespan-calculator.js
+/telco-tools/js/vrad-calculator.js
+/telco-tools/js/gps-measuring.js
+/telco-tools/js/GPSFormatter.js
+/telco-tools/js/GPSUtil.js
+/telco-tools/js/ArrayList.js
+
+# css
+
+/telco-tools/css/common.css
+
+#items listed below NETWORK: are not cached and require network connection
+
+NETWORK:
+
+# json (should not be cached, only used when adding as homescreen app on chrome for android)
+
+/telco-tools/manifest.json
+
+# xml (should not be cached, only used when adding as homescreen app on ie for windows mobile)
+
+/telco-tools/ieconfig.xml
+
+# icons (should not be cached, only used when adding as homescreen app)
+
+/telco-tools/images/android36x36.png
+/telco-tools/images/android48x48.png
+/telco-tools/images/android72x72.png
+/telco-tools/images/android96x96.png
+/telco-tools/images/android128x128.png
+/telco-tools/images/android144x144.png
+/telco-tools/images/android192x192.png
+/telco-tools/images/android196x196.png
+/telco-tools/images/android256x256.png
+/telco-tools/images/android384x384.png
+/telco-tools/images/android512x512.png
+/telco-tools/images/android1024x1024.png
+/telco-tools/images/android2048x2048.png
+/telco-tools/images/ios29x29.png
+/telco-tools/images/ios40x40.png
+/telco-tools/images/ios50x50.png
+/telco-tools/images/ios57x57.png
+/telco-tools/images/ios58x58.png
+/telco-tools/images/ios72x72.png
+/telco-tools/images/ios76x76.png
+/telco-tools/images/ios80x80.png
+/telco-tools/images/ios87x87.png
+/telco-tools/images/ios100x100.png
+/telco-tools/images/ios114x114.png
+/telco-tools/images/ios120x120.png
+/telco-tools/images/ios144x144.png
+/telco-tools/images/ios152x152.png
+/telco-tools/images/ios180x180.png
+/telco-tools/images/favicon.ico
+/telco-tools/images/windows128x128.png
+/telco-tools/images/windows270x270.png
+/telco-tools/images/windows558x270.png
+/telco-tools/images/windows558x558.png
+/telco-tools/images/background_black.png
+/telco-tools/images/background_grey.png
+/telco-tools/images/background_white.png
