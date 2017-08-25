@@ -5,35 +5,37 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <script src="js/common.js"></script>
-    <script src="js/pic-color-finder.js"></script>
-    <title>Pic Color Finder</title>
+    <script src="js/cable-code-finder.js"></script>
+    <title>Cable Code Finder</title>
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="black">
 </head>
 <body onpageshow="onPageShow()">
 <button id="home" onclick="openLink({id: 'home', href: 'index.html'})">Home</button>
 <div id="top">
-    <a id="title" href="javascript:top.frames.location.reload();">Pic Color Finder</a>
+    <a id="title" href="javascript:top.frames.location.reload();">Cable Code Finder</a>
 </div>
 <div id="container">
     <div class="item">
-        <label for="superColor">Super: </label>
-        <select id="superColor" onchange="calculatePair()">
+        <label for="firstLetter">Design: </label>
+        <select id="firstLetter" onchange="updateCableDetails()">
         </select>
-        <label for="binderColor">Binder: </label>
-        <select id="binderColor" onchange="calculatePair()">
+        <label for="secondLetter">Insulation: </label>
+        <select id="secondLetter" onchange="updateCableDetails()">
         </select>
-        <label for="tipRingColor">Tip & Ring: </label>
-        <select id="tipRingColor" onchange="calculatePair()">
+        <label for="thirdLetter">Gauge: </label>
+        <select id="thirdLetter" onchange="updateCableDetails()">
+        </select>
+        <label for="fourthLetter">Sheath: </label>
+        <select id="fourthLetter" onchange="updateCableDetails()">
         </select>
     </div>
     <span id="equals">=</span>
     <div class="item">
-        <label for="pairNumber">Pair: </label>
-        <input id="pairNumber" type="number" placeholder="1234" min="1" max="4200" oninput="calculateColor()"/>
+        <label for="cableDetails">Details: </label>
+        <div id="cableDetails"></div>
         <p id="error"></p>
     </div>
 </div>
 </body>
 </html>
-<!--http://www.superioressex.com/uploadedFiles/osp_copp_colors.pdf-->
