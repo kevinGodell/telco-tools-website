@@ -17,33 +17,30 @@
 </div>
 <div id="container">
     <div class="item">
-        <div class="row">
-            <label for="firstLetter">Design: </label>
-            <select id="firstLetter" onchange="updateCableDetails()">
-            </select>
-        </div>
-        <div class="row">
 
-            <label for="secondLetter">Insulation: </label>
-            <select id="secondLetter" onchange="updateCableDetails()">
-            </select>
-        </div>
         <div class="row">
-            <label for="thirdLetter">Gauge: </label>
-            <select id="thirdLetter" onchange="updateCableDetails()">
-            </select>
+            <label for="firstLetter">Design :</label>
+            <select id="firstLetter" onchange="firstLetterChange()"></select>
         </div>
+        <textarea id="firstLetterDetails" readonly></textarea>
+
         <div class="row">
-            <label for="fourthLetter">Sheath: </label>
-            <select id="fourthLetter" onchange="updateCableDetails()">
-            </select>
+            <label for="secondLetter">Insulation :</label>
+            <select id="secondLetter" onchange="secondLetterChange()"></select>
         </div>
-    </div>
-    <span id="equals">=</span>
-    <div class="item">
-        <label for="cableDetails">Details: </label>
-        <div id="cableDetails"></div>
-        <p id="error"></p>
+        <textarea id="secondLetterDetails" readonly>secondLetterDetails</textarea>
+
+        <div class="row">
+            <label for="thirdLetter">Gauge :</label>
+            <select id="thirdLetter" onchange="thirdLetterChange()"></select>
+        </div>
+        <textarea id="thirdLetterDetails" readonly>thirdLetterDetails</textarea>
+
+        <div class="row">
+            <label for="fourthLetter">Sheath :</label>
+            <select id="fourthLetter" onchange="fourthLetterChange()"></select>
+        </div>
+        <textarea id="fourthLetterDetails" readonly>fourthLetterDetails</textarea>
     </div>
 </div>
 </body>

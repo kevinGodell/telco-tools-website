@@ -1,14 +1,16 @@
-const LOCAL_STORAGE_ITEM = "com.codedbykevin.telco_tools.cable_codes.codeLetters";
+const LOCAL_STORAGE_ITEM = "com.codedbykevin.telco_tools.cable_code_finder.codeLetters";
 
 var firstLetter;
 var secondLetter;
 var thirdLetter;
 var fourthLetter;
-var cableDetails;
+var firstLetterDetails;
+var secondLetterDetails;
+var thirdLetterDetails;
+var fourthLetterDetails;
 var codeLetters;
-var error;
 
-var firstLetterOptions = [/*design*/
+const firstLetterOptions = [/*design*/
     {text: "A", value: "PIC Filled, PIC Riser, PULP Aircore"},
     {text: "B", value: "PIC Aircore"},
     {text: "C", value: "HIgh Potential Filled PIC, PULP Insulated MUP"},
@@ -21,7 +23,7 @@ var firstLetterOptions = [/*design*/
     {text: "T", value: "Terminating Cable Tinned Copper Conductors"}
 ];
 
-var secondLetterOptions = [/*insulation*/
+const secondLetterOptions = [/*insulation*/
     {text: "A", value: "Future Code"},
     {text: "B", value: "Polyolefin, PVC"},
     {text: "C", value: "Foam Skin DEPIC Aircore"},
@@ -39,7 +41,7 @@ var secondLetterOptions = [/*insulation*/
     {text: "S", value: ""}
 ];
 
-var thirdLetterOptions = [/*gauge and conductor metal complete*/
+const thirdLetterOptions = [/*gauge and conductor*/
     {text: "A", value: "22 AWG Copper"},
     {text: "B", value: "19 AWG Copper"},
     {text: "C", value: "17 AWG Aluminum"},
@@ -54,7 +56,7 @@ var thirdLetterOptions = [/*gauge and conductor metal complete*/
     {text: "W", value: "28 AWG Copper"}
 ];
 
-var fourthLetterOptions = [/*sheath complete*/
+const fourthLetterOptions = [/*sheath*/
     {text: "A", value: "ALPETH"},
     {text: "B", value: "CUPETH"},
     {text: "C", value: "STALPETH"},
@@ -87,31 +89,32 @@ function onPageShow() {
         codeLetters = "BKMA";
     }
 
-    var codeLetter = codeLetters.split("");
+    var codeLetterArray = codeLetters.split("");
 
     firstLetter = document.getElementById("firstLetter");
     secondLetter = document.getElementById("secondLetter");
     thirdLetter = document.getElementById("thirdLetter");
     fourthLetter = document.getElementById("fourthLetter");
 
-    cableDetails = document.getElementById("cableDetails");
-
-    error = document.getElementById("error");
+    firstLetterDetails = document.getElementById("firstLetterDetails");
+    secondLetterDetails = document.getElementById("secondLetterDetails");
+    thirdLetterDetails = document.getElementById("thirdLetterDetails");
+    fourthLetterDetails = document.getElementById("fourthLetterDetails");
 
     populateSelect(firstLetter, firstLetterOptions);
     populateSelect(secondLetter, secondLetterOptions);
     populateSelect(thirdLetter, thirdLetterOptions);
     populateSelect(fourthLetter, fourthLetterOptions);
 
-    setSelectedItem(firstLetter, codeLetter[0]);
-    setSelectedItem(secondLetter, codeLetter[1]);
-    setSelectedItem(thirdLetter, codeLetter[2]);
-    setSelectedItem(fourthLetter, codeLetter[3]);
+    setSelectedItem(firstLetter, codeLetterArray[0]);
+    setSelectedItem(secondLetter, codeLetterArray[1]);
+    setSelectedItem(thirdLetter, codeLetterArray[2]);
+    setSelectedItem(fourthLetter, codeLetterArray[3]);
 
-    //cableDetails.innerHTML = "<span style=\"color:blue;font-weight: bold\">sdfsdfsfsfsfsdfsdfdfdfdfdfdfdfdfdf</span>" + codeLetters;
-    //parseLetters();
-
-    updateCableDetails();
+    firstLetter.dispatchEvent(new Event("change"));
+    secondLetter.dispatchEvent(new Event("change"));
+    thirdLetter.dispatchEvent(new Event("change"));
+    fourthLetter.dispatchEvent(new Event("change"));
 }
 
 function setSelectedItem(selectElement, text) {
@@ -123,19 +126,27 @@ function setSelectedItem(selectElement, text) {
     }
 }
 
-function updateCableDetails() {
-
-    var htmlString = ""/*"<span style=\"color:blue;font-weight: bold;font-size: xx-large\">" + firstLetter.options[firstLetter.selectedIndex].text + "</span> : "*/;
-    htmlString += firstLetter.value + "<hr/>";
-    //htmlString += "<span style=\"color:blue;font-weight: bold;font-size: xx-large\">" + secondLetter.options[secondLetter.selectedIndex].text + "</span> : ";
-    htmlString += secondLetter.value + "<hr/>";
-    //htmlString += "<span style=\"color:blue;font-weight: bold;font-size: xx-large\">" + thirdLetter.options[thirdLetter.selectedIndex].text + "</span> : ";
-    htmlString += thirdLetter.value + "<hr/>";
-    //htmlString += "<span style=\"color:blue;font-weight: bold;font-size: xx-large\">" + fourthLetter.options[fourthLetter.selectedIndex].text + "</span> : ";
-    htmlString += fourthLetter.value;
-    cableDetails.innerHTML = htmlString;
-
+function updateCodeLetters() {
     codeLetters = firstLetter.options[firstLetter.selectedIndex].text + secondLetter.options[secondLetter.selectedIndex].text + thirdLetter.options[thirdLetter.selectedIndex].text + fourthLetter.options[fourthLetter.selectedIndex].text;
+    localStorage.setItem(LOCAL_STORAGE_ITEM, codeLetters);
+}
 
-    localStorage.setItem(LOCAL_STORAGE_ITEM, codeLetters)
+function firstLetterChange() {
+    firstLetterDetails.value = firstLetter.value;
+    updateCodeLetters();
+}
+
+function secondLetterChange() {
+    secondLetterDetails.value = secondLetter.value;
+    updateCodeLetters();
+}
+
+function thirdLetterChange() {
+    thirdLetterDetails.value = thirdLetter.value;
+    updateCodeLetters();
+}
+
+function fourthLetterChange() {
+    fourthLetterDetails.value = fourthLetter.value;
+    updateCodeLetters();
 }

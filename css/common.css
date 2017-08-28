@@ -100,6 +100,11 @@ div.row {
     justify-content: flex-start;
 }
 
+div.row select, div.row label {
+    display: inline-block;
+    width: 50%;
+}
+
 button.nav {
     color: white;
     text-align: center;
