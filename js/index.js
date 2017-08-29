@@ -21,6 +21,10 @@ function loadLastPage() {
                 //window.location.href = "pic-color-finder.html";
                 changeLocationHref("pic-color-finder.html");
                 break;
+            case "cable_code_finder" :
+                //window.location.href = "pic-color-finder.html";
+                changeLocationHref("cable-code-finder.html");
+                break;
             case "vrad_calculator" :
                 //window.location.href = "vrad-calculator.html";
                 changeLocationHref("vrad-calculator.html");
