@@ -11,6 +11,7 @@ CACHE:
 # html
 
 /telco-tools/index.html
+/telco-tools/cable-code-finder.html
 /telco-tools/pic-color-finder.html
 /telco-tools/litespan-calculator.html
 /telco-tools/vrad-calculator.html
@@ -18,15 +19,16 @@ CACHE:
 
 # js
 
+/telco-tools/js/ArrayList.js
+/telco-tools/js/cable-code-finder.js
 /telco-tools/js/common.js
-/telco-tools/js/index.js
-/telco-tools/js/pic-color-finder.js
-/telco-tools/js/litespan-calculator.js
-/telco-tools/js/vrad-calculator.js
 /telco-tools/js/gps-measuring.js
 /telco-tools/js/GPSFormatter.js
 /telco-tools/js/GPSUtil.js
-/telco-tools/js/ArrayList.js
+/telco-tools/js/index.js
+/telco-tools/js/litespan-calculator.js
+/telco-tools/js/pic-color-finder.js
+/telco-tools/js/vrad-calculator.js
 
 # css
 
