@@ -36,9 +36,8 @@ const secondLetterOptions = [/*insulation*/
     {text: "K", value: "Solid Polyolefin Aircore(24 - 28 AWG)"},
     {text: "L", value: "Foam Skin DEPIC Petroleum Jelly Filled Core"},
     {text: "M", value: "Solid Polyolefin/PIC with 80\u00B0 C Filling Compound"},
-    {text: "N", value: "Foam Skin Insulation with 80°C filling compound"},
-    {text: "R", value: "Expanded Polyolefin, PVC Skin"},
-    {text: "S", value: ""}
+    {text: "N", value: "Foam Skin Insulation with 80°C Filling Compound"},
+    {text: "R", value: "Expanded Polyolefin, PVC Skin"}
 ];
 
 const thirdLetterOptions = [/*gauge and conductor*/

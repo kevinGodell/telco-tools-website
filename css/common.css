@@ -96,8 +96,8 @@ div.row {
     align-items: stretch;
 
     /*vertical*/
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 div.row select, div.row label {
