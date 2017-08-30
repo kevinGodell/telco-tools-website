@@ -1,7 +1,5 @@
 var standalone = false;
 
-//var params = "";
-
 function isMsPinnedSite() {
     if (typeof window.external !== "undefined" && Object.prototype.hasOwnProperty.call(window.external, "msPinnedSiteState") && window.external.msPinnedSiteState() > 0) {
         return true;
@@ -16,7 +14,6 @@ if (window.navigator.standalone === true/*iOS*/ || window.matchMedia("(display-m
      will fail on all other pages because based on exact url with no params
     */
     standalone = true;
-    //params = "?standalone";
     document.ontouchmove = function (event) {/*prevent screen from being pulled*/
         event.preventDefault();
     };
@@ -51,10 +48,6 @@ function populateSelect(selectElement, dataArray) {
 }
 
 function openLink(linkObj) {
-    //if (standalone === true) {
-    //localStorage.setItem("com.codedbykevin.telco_tools.lastVisitedPage", linkObj.id);
-    //}
-    //window.location.href = linkObj.href + params;
     saveLastVisitedPage(linkObj.id);
     changeLocationHref(linkObj.href);
 }
@@ -64,7 +57,7 @@ function saveLastVisitedPage(linkID) {
 }
 
 function changeLocationHref(linkHref) {
-    window.location.href = linkHref/* + params*/;
+    window.location.href = linkHref;
 }
 
 function trace(str) {
