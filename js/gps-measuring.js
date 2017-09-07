@@ -6,7 +6,7 @@ var totalDistance = 0;
 var totalAccuracy = 0;
 var locations;//ArrayList
 var locationsLength;//locations.getLength()
-var wpid = null;
+var wpid = null;//navigator.geolocation.watchPosition ID
 
 //html elements to be manipulated or populated
 var addBtn;

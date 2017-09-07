@@ -23,19 +23,19 @@ function formatAccuracy(accuracyInMeters, units, prefix) {
     var pre = typeof prefix === "string" ? prefix : "Accuracy : ";
     switch (units) {
         case M :
-            accuracyFormatted = pre + "\u00B1 " + Math.round(accuracyInMeters) + " m";
+            accuracyFormatted = pre + "\u00B1 " + addCommas(Math.round(accuracyInMeters)) + " m";
             break;
         case FT :
         default :
-            accuracyFormatted = pre + "\u00B1 " + Math.round(accuracyInMeters * FEET_PER_METER) + " ft";
+            accuracyFormatted = pre + "\u00B1 " + addCommas(Math.round(accuracyInMeters * FEET_PER_METER)) + " ft";
             break;
     }
     return accuracyFormatted;
 }
 
 function addCommas(value) {
-    //todo create or find a formatter for adding commas
-    return value;
+    //https://blog.tompawlak.org/number-currency-formatting-javascript
+    return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
 //distance between coords is output in feet

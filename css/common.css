@@ -13,6 +13,14 @@ body {
     -webkit-overflow-scrolling: auto;*/
 }
 
+a#mailto {
+    padding-right: 5px;
+    position: fixed;
+    right: 0;
+    color: white;
+    text-decoration: none;
+}
+
 button#home {
     margin: 0;
     position:fixed;
