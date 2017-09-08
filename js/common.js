@@ -22,6 +22,15 @@ if (window.navigator.standalone === true/*iOS*/ || window.matchMedia("(display-m
     };
 }
 
+function addContact() {
+    var top = document.getElementById("top");
+    var a = document.createElement("a");
+    a.href = atob("bWFpbHRvOmtldmluLmdvZGVsbEBnbWFpbC5jb20/c3ViamVjdD1UZWxjbyBUb29scyBGZWVkYmFjayZib2R5PUdyZWF0IGpvYiBLZXZpbiE=");
+    a.textContent = "\u2709";
+    a.id = "mailto";
+    top.appendChild(a);
+}
+
 function adjustApp() {
     //var top = document.getElementById("top");
     if (standalone === false) {
@@ -31,6 +40,7 @@ function adjustApp() {
     } else {
         //top.style.backgroundImage = "url('/telco-tools/images/background_black.png')";
     }
+    addContact();
 }
 
 function populateSelect(selectElement, dataArray) {

@@ -4,7 +4,6 @@ if (standalone === true) {
 
 function onPageShow() {
     adjustApp();
-    //todo may dynamically load links from array
 }
 
 function loadLastPage() {
