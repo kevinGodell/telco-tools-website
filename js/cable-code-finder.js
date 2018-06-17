@@ -38,7 +38,7 @@ const secondLetterOptions = [/*insulation*/
     {text: "M", value: "Solid Polyolefin/PIC with 80\u00B0 C Filling Compound"},
     {text: "N", value: "Foam Skin Insulation with 80°C Filling Compound"},
     {text: "R", value: "Expanded Polyolefin, PVC Skin"},
-    {test: "S", value: "Foam with 80\u00B0 C Filling Compound"}
+    {text: "S", value: "Foam with 80\u00B0 C Filling Compound"}
 ];
 
 const thirdLetterOptions = [/*gauge and conductor*/
