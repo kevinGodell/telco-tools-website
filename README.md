@@ -1,1 +1,2 @@
 # telco-tools-website
+[Telco Tools](https://kevingodell.github.io/telco-tools-website/) is designed for use on your mobile device. Please visit the site in the default browser of your mobile device and use the browser's "add to home page" option.
